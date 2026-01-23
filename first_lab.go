@@ -24,6 +24,8 @@ func main() {
 // go run "FILE NAME "  : to run a Program 
 // ls   : to print the Files 
 // pwd  : to print your Location 
+// clear : to clear The Terminal
+// Ctrl + C : To Stop The Program
 // ==========================================
 
 
@@ -35,3 +37,4 @@ func main() {
 // Println : Simple and jump a line at the End 
 //
 // Printf  : More Complex , That u can take the Full Control ,Doesn't Jump a line 
+
