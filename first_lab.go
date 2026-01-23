@@ -14,5 +14,24 @@ func main() {
 	name, _ := Input.ReadString('\n') // Input Just a Name you can Change it
 
 	fmt.Println(name, "!")
-
 }
+
+
+
+// ============== Terminal ==================
+// cd ~/ "File name "      : to enter a File 
+// cd ..    : to go back 
+// go run "FILE NAME "  : to run a Program 
+// ls   : to print the Files 
+// pwd  : to print your Location 
+// ==========================================
+
+
+
+
+
+// There is a Different Between " Println , Printf " 
+// 
+// Println : Simple and jump a line at the End 
+//
+// Printf  : More Complex , That u can take the Full Control ,Doesn't Jump a line 
