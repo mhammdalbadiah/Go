@@ -1,67 +1,37 @@
 package main
 
-import (
-	"fmt"
-)
-
-// Global VAR
-var balance int64 = 1000
-
-// Deposit
-func Deposit() {
-	var Dep int64
-	fmt.Println("Please Enter The Amount you want to Deposit : ")
-	fmt.Scan(&Dep)
-	balance += Dep
-	fmt.Println("DEPOSIT DONE !")
-
-}
-
-// Withdraw
-func Withdraw() {
-	var wit int64
-	fmt.Println("Please Enter The Amount you want To Withdraw :")
-	fmt.Scan(&wit)
-	if wit <= balance {
-		balance -= wit
-		fmt.Println("WITHDRAW DONE !")
-	} else {
-		fmt.Println("INVALID!")
-	}
-
-}
-
-// Check Balance
-func Check() {
-	fmt.Println("YOUR BALANCE IS :", balance)
-}
+import "fmt"
 
 func main() {
-	choice := 1
 
-	for {
+	var num int
+	change := 0
 
-		fmt.Println("================================")
-		fmt.Println("	WLLCOME TO ALINMA BANK")
-		fmt.Println(" 1. Deposit              ")
-		fmt.Println(" 2. Withdraw			  ")
-		fmt.Println(" 3. Check Balance.       ")
-		fmt.Println(" 4. Exit 				  ")
-		fmt.Println("================================")
-		fmt.Scan(&choice)
-		if choice == 4 {
-			break
-		}
+	fmt.Println("Welcome! Enter The Number of Elements:")
+	fmt.Scan(&num)
 
-		switch choice {
+	ele := make([]int, num)
 
-		case 1:
-			Deposit()
-		case 2:
-			Withdraw()
-		case 3:
-			Check()
-		}
+	for i := 0; i < num; i++ {
+		fmt.Println("Element Number:", i+1)
+		fmt.Scan(&ele[i])
 	}
 
+	fmt.Println("If you want to Change the Size of the Elements, enter NEW size:")
+	fmt.Scan(&change)
+
+	if change > num {
+		for i := 0; i < change-num; i++ {
+
+			ele = append(ele, 0)
+
+			fmt.Println("Element Number:", num+i+1)
+			fmt.Scan(&ele[len(ele)-1])
+		}
+	} else {
+		fmt.Println("INVALID INPUT !")
+	}
+
+	fmt.Println("Final Elements:", ele)
+	fmt.Println("len:", len(ele), "cap:", cap(ele))
 }
