@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-var courses int
+var courses int // Global VAR
 
 // rff : Read From File
 func rff() error {
